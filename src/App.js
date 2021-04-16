@@ -5,11 +5,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Home from "./components/Home/Home/Home";
 import AddTutor from './components/AddTutor/AddTutor'
 import Login from "./components/LogIn/Login";
+import AddService from "./components/AddTutor/AddService";
 
 export const UserContext = createContext();
 
@@ -30,6 +32,9 @@ function App() {
           </Route>
           <Route path="/addTutor">
             <AddTutor></AddTutor>
+          </Route>
+          <Route path="/addService">
+            <AddService></AddService>
           </Route>
         </Switch>
       </Router >
