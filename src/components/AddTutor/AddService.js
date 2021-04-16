@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import Sidebar from '../Dashboard/Sidebar/Sidebar';
 
 
 const AddService = () => {
@@ -44,17 +45,21 @@ const AddService = () => {
             });
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="key" placeholder="Enter key" {...register("key")} /><br />
-                <input name="name" placeholder="Enter name" {...register("name")} /><br />
-                <input name="subject" placeholder="Enter subject" {...register("subject")} /><br />
-                <input name="price" placeholder="Enter price" {...register("price")} /><br />
-                <input name="duration" placeholder="Enter duration" {...register("duration")} /><br />
-                <input name="exampleRequired" type="file" onChange={handleImageUpload} /><br />
-                <input type="submit" />
-            </form>
-        </div>
+        <section className="container-fluid row">
+            <Sidebar></Sidebar>
+            <div className="col-md-9 p-4 ps-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
+                <h5 className="text-brand">Add a Service</h5>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input name="key" placeholder="Enter key" {...register("key")} /><br />
+                    <input name="name" placeholder="Enter name" {...register("name")} /><br />
+                    <input name="subject" placeholder="Enter subject" {...register("subject")} /><br />
+                    <input name="price" placeholder="Enter price" {...register("price")} /><br />
+                    <input name="duration" placeholder="Enter duration" {...register("duration")} /><br />
+                    <input name="exampleRequired" type="file" onChange={handleImageUpload} /><br />
+                    <input type="submit" />
+                </form>
+            </div>
+        </section >
     );
 };
 

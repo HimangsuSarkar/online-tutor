@@ -20,7 +20,7 @@ const Sidebar = () => {
                 </li>
                 <div>
                     <li>
-                        <Link to="/addTutor" className="text-white">
+                        <Link to="/addService" className="text-white">
                             <FontAwesomeIcon icon={faCalendar} /> <span>Add Service</span>
                         </Link>
                     </li>
