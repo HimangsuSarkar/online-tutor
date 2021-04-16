@@ -1,3 +1,5 @@
+import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
@@ -11,6 +13,7 @@ const ReviewDetail = (props) => {
                     <Card.Body>
                         <Card.Title>{name} || {address}</Card.Title>
                         <Card.Text>{quote}</Card.Text>
+                        <FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStarHalf} />
                     </Card.Body>
                 </Card>
             </div>

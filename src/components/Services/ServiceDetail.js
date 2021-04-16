@@ -19,7 +19,7 @@ const ServiceDetail = (props) => {
                         <Card.Title>{name} || {profession}</Card.Title>
                         <p>Subject:{subject} || Price: {price} || Class Duration:{duration}</p>
                         <Card.Text>{details}</Card.Text>
-                        <Button variant="primary" onClick={() => handleBuyProduct(key)}>Buy Now</Button>
+                        <Button variant="primary" onClick={() => handleBuyProduct(key)}>Buy Course</Button>
                     </Card.Body>
                 </Card>
             </div>
