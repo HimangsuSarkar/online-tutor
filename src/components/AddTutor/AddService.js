@@ -11,9 +11,11 @@ const AddService = () => {
         const serviceData = {
             key: data.key,
             name: data.name,
+            profession: data.profession,
             subject: data.subject,
             price: data.price,
             duration: data.duration,
+            details: data.details,
             imageURL: imageURL,
         };
         const url = `http://localhost:5000/addService`;
@@ -52,9 +54,11 @@ const AddService = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input name="key" placeholder="Enter key" {...register("key")} /><br />
                     <input name="name" placeholder="Enter name" {...register("name")} /><br />
+                    <input name="profession" placeholder="Enter profession" {...register("profession")} /><br />
                     <input name="subject" placeholder="Enter subject" {...register("subject")} /><br />
                     <input name="price" placeholder="Enter price" {...register("price")} /><br />
                     <input name="duration" placeholder="Enter duration" {...register("duration")} /><br />
+                    <textarea name="details" type="" placeholder=" Enter details" {...register("details")} /><br />
                     <input name="exampleRequired" type="file" onChange={handleImageUpload} /><br />
                     <input type="submit" />
                 </form>
