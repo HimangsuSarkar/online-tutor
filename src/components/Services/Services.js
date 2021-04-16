@@ -9,13 +9,14 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
+
     return (
         <div>
             <h1 className="text-center">Our Valuable Tutor And Courses</h1>
             <Container className="pt-5">
                 <Row>
                     {
-                        services.map(service => <Col xs={12} md={4}>< ServiceDetail service={service} ></ServiceDetail></Col>)
+                        services.map(service => <Col xs={12} md={4}>< ServiceDetail service={service} key={service.name}></ServiceDetail></Col>)
                     }
                 </Row>
             </Container >

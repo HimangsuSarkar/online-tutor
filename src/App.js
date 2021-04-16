@@ -12,6 +12,7 @@ import Home from "./components/Home/Home/Home";
 import AddTutor from './components/AddTutor/AddTutor'
 import Login from "./components/LogIn/Login";
 import AddService from "./components/AddTutor/AddService";
+import AddReview from "./components/Home/Review/AddReview";
 
 export const UserContext = createContext();
 
@@ -36,9 +37,12 @@ function App() {
           <Route path="/addService">
             <AddService></AddService>
           </Route>
+          <Route path="/addReview">
+            <AddReview></AddReview>
+          </Route>
         </Switch>
       </Router >
-    </UserContext.Provider>
+    </UserContext.Provider >
   );
 }
 
