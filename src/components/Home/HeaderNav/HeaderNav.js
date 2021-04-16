@@ -11,13 +11,13 @@ const HeaderNav = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item active">
-                        <a className="nav-link mr-5" href="/home">Home <span className="sr-only">(current)</span></a>
+                        <a className="nav-link mr-5 text-white" href="/home">Home <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5" href="/login">login</a>
+                        <a className="nav-link mr-5 text-white" href="/login">login</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5" href="/dashboard">Dashboard</a>
+                        <a className="nav-link mr-5 text-white" href="/dashboard">Dashboard</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link mr-5 text-white" href="#">Reviews</a>

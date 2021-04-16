@@ -1,38 +1,40 @@
 import React from 'react';
 import './Blog.css';
-import tutor from '../../../image/tutor_5.jpg'
+import tutor1 from '../../../image/tutor_5.jpg'
+import tutor2 from '../../../image/review_3.jpg'
+import tutor3 from '../../../image/tutor_4.jpg'
 import BlogPost from './BlogPost';
 const blogData = [
     {
-        title: 'Check at least a doctor in a year for your teeth',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author: 'Dr. Cudi',
-        authorImg: tutor,
-        date: '23 April 2019'
+        title: 'On-demand tutoring',
+        description: "Connect with an online tutor in less than 30 seconds, 24/7. It doesn’t matter if you want help with a single problem or you need a 3-hour lesson.",
+        author: 'Mr.Xiayi',
+        authorImg: tutor1,
+        date: '2 January 2021'
     },
     {
-        title: 'Two time brush in a day can keep you healthy',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author: 'Dr. Sinthia',
-        authorImg: tutor,
-        date: '23 April 2019'
+        title: 'Learn from the best tutors',
+        description: 'Highly qualified tutors from the best universities across the globe ready to help.An acceptance rate  of 4% means all our tutors are thoroughly screened.  ',
+        author: 'Mr.Zhang',
+        authorImg: tutor2,
+        date: '23 March 2021'
     },
     {
-        title: 'The tooth cancer is taking a challenge',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author: 'Dr. Cudi',
-        authorImg: tutor,
-        date: '23 April 2019'
+        title: 'All the tools you need',
+        description: 'Our lesson space features a virtual whiteboard, text editor, audio/ video chat, screensharing and so much more.All lessons are archived for your convenience. ',
+        author: 'Mr Xu',
+        authorImg: tutor3,
+        date: '13 April 2021'
     },
 ]
 const Blog = () => {
 
     return (
         <section className="blogs my-5">
-            <div className="container">
+            <div className="container pb-5">
                 <div className="section-header text-center">
-                    <h5 className="text-primary text-uppercase">our blog</h5>
-                    <h1>From Our Blog News</h1>
+                    <h5 className="text-primary text-uppercase ">Our Blog</h5>
+                    <h1 >From Our Blog News</h1>
                 </div>
                 <div className="card-deck mt-5">
                     {

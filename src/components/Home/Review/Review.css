@@ -1,0 +1,8 @@
+.reviews{
+background-image: url(../../../image/virtual-backgrounds.png);
+position: relative;
+background-size: cover;
+background-repeat: no-repeat;
+z-index: 1;
+
+}

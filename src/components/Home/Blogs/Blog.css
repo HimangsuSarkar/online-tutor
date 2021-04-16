@@ -1,11 +1,15 @@
+.blogs{
+ background-image: url(../../../image/blog-background.png);
+position: relative;
+ z-index: 1;
+}
 .blogs .card{
     border: 0;
 }
 .blogs .card-header{
     border: 0;
-    background-color: transparent;
-
-
+    /* background-color: transparent; */
+    background-color: #ec0f64;
 }
 
 .blogs .card:hover{
@@ -14,7 +18,7 @@
     transition:  .1s  all ease-in-out !important;
 }
 .blogs .card:hover .card-body{
-    /* background-image: url(../../../images/quote.png); */
+    background-image: url(../../../image/quote.png);
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 60%;
