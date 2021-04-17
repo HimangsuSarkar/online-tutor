@@ -10,20 +10,20 @@ const Enroll = () => {
     const [enrolls, setEnrolls] = useState({});
     const { register, handleSubmit, errors } = useForm();
     const [loggedInUser] = useContext(UserContext);
-    const { displayName, email } = loggedInUser;
+    const { name, email } = loggedInUser;
 
     useEffect(() => {
         fetch('http://localhost:5000/service/' + key)
             .then(res => res.json())
             .then(data => setEnrolls(data))
     }, [key])
-    // const { name, subject, price, duration } = enrolls;
+    const { subject, price, duration } = enrolls;
 
 
     const onSubmit = data => {
         history.push(`/enroll_list`);
         const enrollData = {
-            displayName,
+            name,
             email,
             enrolls,
             data,
@@ -48,11 +48,20 @@ const Enroll = () => {
             <Sidebar></Sidebar>
             <div className="col-md-9 p-4 ps-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
                 <h5 className="text-brand">Enroll Course</h5>
-                < form className='ship-form' onSubmit={handleSubmit(onSubmit)} >
-                    < input name="displayName" defaultValue={loggedInUser.displayName} {...register("displayName")} /><br />
-                    < input name="email" defaultValue={loggedInUser.email} {...register("email")} /> <br />
-                    < input name="address" {...register("address")} /><br />
-                    < input name="phone" {...register("phone")} /><br />
+                < form className='' onSubmit={handleSubmit(onSubmit)} >
+                    <input className="col-4" name="name" defaultValue={loggedInUser.name} {...register("name")} /><br />
+                    <input className="col-4" name="email" defaultValue={loggedInUser.email} {...register("email")} /> <br />
+                    <input className="col-4" name="price" defaultValue={price} {...register("price")} /> <br />
+                    <input className="col-4" name="address" {...register("address")} /><br />
+                    <input className="col-4" name="phone" {...register("phone")} /><br />
+                    <div className="col-4">
+                        <select className="form-control" name="status"{...register("status", { required: true })} >
+                            <option disabled={true} value="Not set">Select Status</option>
+                            <option value="Done">Done</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Cancel">Cancel</option>
+                        </select>
+                    </div>
                     <input type="submit" value="Enroll" />
                 </form >
             </div>
