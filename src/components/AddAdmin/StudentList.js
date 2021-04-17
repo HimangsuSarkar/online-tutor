@@ -16,29 +16,30 @@ const StudentList = () => {
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
-            <h3>order page</h3>
-            <Table striped bordered hover variant="dark">
-                <thead>
-                    <tr>
-                        <th>Sl</th>
-                        <th> Name</th>
-                        <th>Email</th>
-                        <th>Service</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>{
-                    students.map(student =>
+            <div className="col-md-10 p-4 ps-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
+                <h3>Student List</h3>
+                <Table striped bordered hover variant="dark" >
+                    <thead>
                         <tr>
-                            <td>{student.name}</td>
-                            <td>{student.email}</td>
-                            <td>{student.enrolls.subject}</td>
-                            <td>{student.enrollPayData.status}</td>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Service</th>
+                            <th>Status</th>
                         </tr>
-                    )
-                }
-                </tbody>
-            </Table>
+                    </thead>
+                    <tbody>{
+                        students.map(student =>
+                            <tr>
+                                <td>{student?.enrollPayData.name}</td>
+                                <td>{student?.enrollPayData.email}</td>
+                                <td>{student?.enrolls.subject}</td>
+                                <td>{student?.enrollPayData.status}</td>
+                            </tr>
+                        )
+                    }
+                    </tbody>
+                </Table>
+            </div>
         </section >
     );
 };

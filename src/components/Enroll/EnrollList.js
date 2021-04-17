@@ -22,13 +22,13 @@ const EnrollList = () => {
                     <Row>
                         {
                             enrollList.map(enList => <Col xs={12} md={4}> < Card style={{ width: '18rem' }} className="mb-4">
-                                <Card.Header>Student Name: {enList.enrollPayData.name}</Card.Header>
+                                <Card.Header>Student Name: {enList?.enrollPayData.name}</Card.Header>
                                 <Card.Body>
-                                    <Card.Title>Subject: {enList.enrolls.subject}</Card.Title>
+                                    <Card.Title>Subject: {enList?.enrolls.subject}</Card.Title>
                                     <Card.Text>
-                                        <p>Status:{enList.enrollPayData.status}</p>
-                                        <p>Course Duration: {enList.enrolls.duration}</p>
-                                        <p>Enroll Time:{enList.enrollTime}</p>
+                                        <p>Status:{enList?.enrollPayData.status}</p>
+                                        <p>Course Duration: {enList?.enrolls.duration}</p>
+                                        <p>Enroll Time:{enList?.enrollTime}</p>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
