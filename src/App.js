@@ -13,6 +13,7 @@ import AddTutor from './components/AddTutor/AddTutor'
 import Login from "./components/LogIn/Login";
 import AddService from "./components/AddTutor/AddService";
 import AddReview from "./components/Home/Review/AddReview";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 
@@ -28,9 +29,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
-          </Route>
+          </PrivateRoute>
           <Route path="/addTutor">
             <AddTutor></AddTutor>
           </Route>
