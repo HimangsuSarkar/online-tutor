@@ -34,7 +34,7 @@ const Enroll = () => {
             enrolls,
             enrollPayData,
             paymentId,
-            oderTime: new Date().toDateString('dd/MM/yyyy')
+            enrollTime: new Date().toDateString('dd/MM/yyyy')
         };
         const url = `http://localhost:5000/addEnroll`;
         console.log(enrollData);
@@ -62,14 +62,11 @@ const Enroll = () => {
                         <input className="col-4" name="price" defaultValue={price} {...register("price")} /> <br />
                         <input className="col-4" name="address" placeholder="Enter address"  {...register("address")} /><br />
                         <input className="col-4" name="phone" placeholder="Enter phone"  {...register("phone")} /><br />
-                        <div className="col-4">
-                            <select className="form-control" name="status"{...register("status", { required: true })} >
-                                <option disabled={true} value="Not set">Select Status</option>
-                                <option value="Done">Done</option>
-                                <option value="Pending">Pending</option>
-                                <option value="Cancel">Cancel</option>
-                            </select>
-                        </div>
+                        <select name="status"{...register(" status")}>
+                            <option value="Done">Done</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Cancel">Cancel</option>
+                        </select><br />
                         <input type="submit" value="Enroll" />
                     </form >
                 </div>

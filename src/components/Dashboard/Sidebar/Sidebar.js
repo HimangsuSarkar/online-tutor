@@ -40,8 +40,8 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/doctor/setting" className="text-white" >
-                            <FontAwesomeIcon icon={faCog} /> <span>Settings</span>
+                        <Link to="enroll_list" className="text-white" >
+                            <FontAwesomeIcon icon={faCog} /> <span>Enroll List</span>
                         </Link>
                     </li>
                 </div>
