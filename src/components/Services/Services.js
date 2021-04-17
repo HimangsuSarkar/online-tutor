@@ -17,7 +17,7 @@ const Services = () => {
                 <Container className="pt-5">
                     < Row >
                         {
-                            services.map(service => <Col xs={12} md={4}>< ServiceDetail service={service} key={service.name}></ServiceDetail></Col>)
+                            services.map(service => <Col xs={12} md={4}>< ServiceDetail service={service} key={services.key}></ServiceDetail></Col>)
                         }
                     </Row>
                 </Container >

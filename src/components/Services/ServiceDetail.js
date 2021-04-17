@@ -3,12 +3,11 @@ import { Button, Card } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 
 const ServiceDetail = (props) => {
-    console.log(props.service);
     const { key, name, profession, subject, details, price, duration, imageURL } = props.service;
 
     const history = useHistory()
-    const handleBuyProduct = (key) => {
-        history.push(`/checkout/${key}`)
+    const handleEnroll = (key) => {
+        history.push(`/enroll/${key}`)
     }
     return (
         <section className="container-fluid row">
@@ -19,7 +18,7 @@ const ServiceDetail = (props) => {
                         <Card.Title>{name} || {profession}</Card.Title>
                         <p>Subject:{subject} || Price: {price} || Class Duration:{duration}</p>
                         <Card.Text>{details}</Card.Text>
-                        <Button variant="primary" onClick={() => handleBuyProduct(key)}>Buy Course</Button>
+                        <Button variant="primary" onClick={() => handleEnroll(key)}>Buy Course</Button>
                     </Card.Body>
                 </Card>
             </div>

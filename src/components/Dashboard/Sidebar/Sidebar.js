@@ -30,8 +30,8 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/prescriptions" className="text-white">
-                            <FontAwesomeIcon icon={faFileAlt} /> <span>Prescriptions</span>
+                        <Link to="/enroll/:key" className="text-white">
+                            <FontAwesomeIcon icon={faFileAlt} /> <span>Enroll</span>
                         </Link>
                     </li>
                     <li>
