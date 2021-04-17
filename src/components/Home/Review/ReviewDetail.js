@@ -4,7 +4,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const ReviewDetail = (props) => {
-    const { key, name, address, quote, imageURL } = props.review;
+    const { name, address, quote, imageURL } = props.review;
     return (
         <section className="container-fluid row">
             <div>

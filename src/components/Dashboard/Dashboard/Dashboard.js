@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Dashboard = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const containerStyle = {
         backgroundColor: "#F4FDFB",
         border: '1px solid red'

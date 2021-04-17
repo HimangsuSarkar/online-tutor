@@ -16,6 +16,8 @@ import AddReview from "./components/Home/Review/AddReview";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Enroll from "./components/Enroll/Enroll";
 import EnrollList from "./components/Enroll/EnrollList";
+import AddAdmin from "./components/AddAdmin/AddAdmin";
+import StudentList from "./components/AddAdmin/StudentList";
 
 export const UserContext = createContext();
 
@@ -40,15 +42,21 @@ function App() {
           <PrivateRoute path="/enroll_list">
             <EnrollList></EnrollList>
           </PrivateRoute>
-          <Route path="/addTutor">
-              <AddTutor></AddTutor>
-            </Route>
-            <Route path="/addService">
-              <AddService></AddService>
-            </Route>
-            <Route path="/addReview">
-              <AddReview></AddReview>
-            </Route>
+          <PrivateRoute path="/addAdmin">
+            <AddAdmin></AddAdmin>
+          </PrivateRoute>
+          <PrivateRoute path="/students">
+            <StudentList></StudentList>
+          </PrivateRoute>
+          <PrivateRoute path="/addTutor">
+            <AddTutor></AddTutor>
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
+            <AddService></AddService>
+          </PrivateRoute>
+          <Route path="/addReview">
+            <AddReview></AddReview>
+          </Route>
         </Switch>
       </Router >
     </UserContext.Provider >

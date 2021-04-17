@@ -1,15 +1,14 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { UserContext } from '../../../App';
 
 
 const AddReview = () => {
     const [imageURL, setImageURL] = useState(null);
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [loggedInUser] = useContext(UserContext);
-    const { email } = loggedInUser;
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    // const [loggedInUser] = useContext(UserContext);
+    // // const { email } = loggedInUser;
     const onSubmit = data => {
         const ReviewData = {
             key: data.key,
