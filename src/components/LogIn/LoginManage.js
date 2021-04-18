@@ -6,12 +6,12 @@ export const initializeLogin = () => {
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
     } else {
-        firebase.app(); // if already initialized, use that one
+        firebase.app();
     }
 }
 
 const setUserToken = () => {
-    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function (idToken) {
+    firebase.auth().currentUser.getIdToken(true).then(function (idToken) {
         sessionStorage.setItem('token', idToken);
     }).catch(function (error) {
         // Handle error
