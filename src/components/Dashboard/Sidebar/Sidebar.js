@@ -43,6 +43,11 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faCreditCard} /> <span>Enroll</span>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/enroll_list" className="text-white" >
+                        <FontAwesomeIcon icon={faClipboardList} /> <span>Enroll List</span>
+                    </Link>
+                </li>
                 {isAdmin &&
                     <div>
                         <li>
@@ -56,13 +61,13 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/enroll_list" className="text-white" >
-                                <FontAwesomeIcon icon={faClipboardList} /> <span>Enroll List</span>
+                            <Link to="/students" className="text-white" >
+                                <FontAwesomeIcon icon={faListAlt} /> <span>Students List</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="/students" className="text-white" >
-                                <FontAwesomeIcon icon={faListAlt} /> <span>Students List</span>
+                            <Link to="/student_enroll" className="text-white" >
+                                <FontAwesomeIcon icon={faClipboardList} /> <span>Admin Enroll List </span>
                             </Link>
                         </li>
                     </div>

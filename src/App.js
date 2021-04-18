@@ -18,6 +18,7 @@ import Enroll from "./components/Enroll/Enroll";
 import EnrollList from "./components/Enroll/EnrollList";
 import AddAdmin from "./components/AddAdmin/AddAdmin";
 import StudentList from "./components/AddAdmin/StudentList";
+import StudentEnroll from "./components/Enroll/StudentEnroll";
 
 export const UserContext = createContext();
 
@@ -41,6 +42,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/enroll_list">
             <EnrollList></EnrollList>
+          </PrivateRoute>
+          <PrivateRoute path="/student_enroll">
+            <StudentEnroll></StudentEnroll>
           </PrivateRoute>
           <PrivateRoute path="/addAdmin">
             <AddAdmin></AddAdmin>

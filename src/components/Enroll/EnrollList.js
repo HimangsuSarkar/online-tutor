@@ -8,7 +8,7 @@ const EnrollList = () => {
     const [enrollList, setEnrollList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/enroll_list')
+        fetch('http://localhost:5000/enroll_list?email=' + loggedInUser?.email)
             .then(res => res.json())
             .then(data => setEnrollList(data))
 
@@ -17,7 +17,7 @@ const EnrollList = () => {
         <section className="container-fluid row">
             <Sidebar></Sidebar>
             <div className="col-md-10 p-4 ps-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                <h1>All Students Enroll List</h1>
+                <h1> Students Enroll List</h1>
                 <Container>
                     <Row>
                         {
