@@ -19,8 +19,6 @@ const Enroll = () => {
             .then(res => res.json())
             .then(data => setEnrolls(data))
     }, [key])
-    const { price } = enrolls;
-
 
     const onSubmit = data => {
         setEnrollPayData(data);
@@ -59,11 +57,12 @@ const Enroll = () => {
                     <form className='' onSubmit={handleSubmit(onSubmit)} >
                         <input className="col-4" name="name" placeholder="Enter Name" defaultValue={loggedInUser.name} {...register("name")} /><br />
                         <input className="col-4" name="email" placeholder="Enter Email" defaultValue={loggedInUser.email} {...register("email")} /> <br />
-                        <input className="col-4" name="price" defaultValue={price} {...register("price")} /> <br />
+                        <input className="col-4" name="price" defaultValue={enrolls.price} {...register("price")} /> <br />
                         <input className="col-4" name="address" placeholder="Enter address"  {...register("address")} /><br />
                         {errors.address && <span>This field is required</span>}
                         <input className="col-4" name="phone" placeholder="Enter phone"  {...register("phone")} /><br />
                         <select name="status"{...register(" status")}>
+                            <option value="">Select your Status</option>
                             <option value="Done">Done</option>
                             <option value="Pending">Pending</option>
                             <option value="Cancel">Cancel</option>
