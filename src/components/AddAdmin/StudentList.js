@@ -24,7 +24,7 @@ const StudentList = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Service</th>
-                            <th>Status</th>
+                            <th>Enroll Time</th>
                         </tr>
                     </thead>
                     <tbody>{
@@ -33,7 +33,7 @@ const StudentList = () => {
                                 <td>{student?.enrollPayData.name}</td>
                                 <td>{student?.enrollPayData.email}</td>
                                 <td>{student?.enrolls.subject}</td>
-                                <td>{student?.enrollPayData.status}</td>
+                                <td>{student?.enrollTime}</td>
                             </tr>
                         )
                     }
