@@ -6,7 +6,7 @@ import { UserContext } from '../../../App';
 import './Sidebar.css';
 
 const Sidebar = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const Sidebar = () => {
         })
             .then(res => res.json())
             .then(data => setIsAdmin(data))
-    }, [])
+    }, [loggedInUser])
 
 
     return (

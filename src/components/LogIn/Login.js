@@ -1,9 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
-import firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from "./firebase.config"
 import { handleGoogleSingIN, initializeLogin } from './LoginManage';
 import './Login.css'
 

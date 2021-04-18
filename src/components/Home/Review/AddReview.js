@@ -55,6 +55,7 @@ const AddReview = () => {
                     <input name="name" placeholder="Enter name" {...register("name")} /><br />
                     {/* <input name="email" placeholder="Enter Email" defaultValue={loggedInUser.email} {...register("email")} /><br /> */}
                     <input name="address" placeholder="Enter address" {...register("address")} /><br />
+                    {errors.address && <span>This field is required</span>}
                     <textarea name="quote" type="" placeholder=" Enter your quote" {...register("quote")} /><br />
                     <input name="exampleRequired" type="file" onChange={handleImageUpload} /><br />
                     <input type="submit" />

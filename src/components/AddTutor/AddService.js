@@ -6,7 +6,7 @@ import Sidebar from '../Dashboard/Sidebar/Sidebar';
 
 const AddService = () => {
     const [imageURL, setImageURL] = useState(null);
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         const serviceData = {
             key: data.key,
@@ -56,6 +56,7 @@ const AddService = () => {
                     <input name="name" placeholder="Enter name" {...register("name")} /><br />
                     <input name="profession" placeholder="Enter profession" {...register("profession")} /><br />
                     <input name="subject" placeholder="Enter subject" {...register("subject")} /><br />
+                    {errors.subject && <span>This field is required</span>}
                     <input name="price" placeholder="Enter price" {...register("price")} /><br />
                     <input name="duration" placeholder="Enter duration" {...register("duration")} /><br />
                     <textarea name="details" type="" placeholder=" Enter details" {...register("details")} /><br />

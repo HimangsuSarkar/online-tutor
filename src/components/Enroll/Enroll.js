@@ -9,7 +9,7 @@ const Enroll = () => {
     const { key } = useParams();
     const history = useHistory()
     const [enrolls, setEnrolls] = useState({});
-    const { register, handleSubmit, errors } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [loggedInUser] = useContext(UserContext);
     const { name, email } = loggedInUser;
     const [enrollPayData, setEnrollPayData] = useState(null);
@@ -19,7 +19,7 @@ const Enroll = () => {
             .then(res => res.json())
             .then(data => setEnrolls(data))
     }, [key])
-    const { subject, price, duration } = enrolls;
+    const { price } = enrolls;
 
 
     const onSubmit = data => {
@@ -61,6 +61,7 @@ const Enroll = () => {
                         <input className="col-4" name="email" placeholder="Enter Email" defaultValue={loggedInUser.email} {...register("email")} /> <br />
                         <input className="col-4" name="price" defaultValue={price} {...register("price")} /> <br />
                         <input className="col-4" name="address" placeholder="Enter address"  {...register("address")} /><br />
+                        {errors.address && <span>This field is required</span>}
                         <input className="col-4" name="phone" placeholder="Enter phone"  {...register("phone")} /><br />
                         <select name="status"{...register(" status")}>
                             <option value="Done">Done</option>

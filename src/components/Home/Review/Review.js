@@ -1,10 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { UserContext } from '../../../App';
 import ReviewDetail from './ReviewDetail';
 import './Review.css';
 const Review = () => {
-    const [loggedInUser] = useContext(UserContext);
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {

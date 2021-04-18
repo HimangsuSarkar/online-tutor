@@ -20,13 +20,13 @@ const HeaderNav = () => {
                         <a className="nav-link mr-5 text-white" href="/dashboard">Dashboard</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5 text-white" href="#">Reviews</a>
+                        <a className="nav-link mr-5 text-white" href="/home">Reviews</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5 text-white" href="#">Blogs</a>
+                        <a className="nav-link mr-5 text-white" href="/home">Blogs</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5 text-white" href="#">Contact Us</a>
+                        <a className="nav-link mr-5 text-white" href="/home">Contact Us</a>
                     </li>
                 </ul>
             </div>

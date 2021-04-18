@@ -7,7 +7,7 @@ const ReviewDetail = (props) => {
     const { name, address, quote, imageURL } = props.review;
     return (
         <section className="container-fluid row">
-            <div>
+            <div id="review">
                 <Card style={{ width: '18rem' }} className="mb-4">
                     <Card.Img variant="top" src={imageURL} />
                     <Card.Body>
@@ -17,7 +17,7 @@ const ReviewDetail = (props) => {
                     </Card.Body>
                 </Card>
             </div>
-        </section>
+        </section >
     );
 };
 
