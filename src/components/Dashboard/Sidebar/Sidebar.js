@@ -67,7 +67,7 @@ const Sidebar = () => {
                         </li>
                         <li>
                             <Link to="/student_enroll" className="text-white" >
-                                <FontAwesomeIcon icon={faClipboardList} /> <span>Admin Enroll List </span>
+                                <FontAwesomeIcon icon={faClipboardList} /> <span>Enroll Management </span>
                             </Link>
                         </li>
                     </div>
